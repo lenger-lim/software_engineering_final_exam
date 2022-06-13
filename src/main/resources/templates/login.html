@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <form name="myForm" method="post" action="/home" onsubmit="return validate()">
+    <label for="">Username: </label>
+    <input type="text" name="username" id="username">
+    <label for="">Password: </label>
+    <input type="text" name="password" id="password">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script type="text/javascript">
+    function validate() {
+      let username = document.getElementsById("usaername");
+      let password = document.getElementsById("password");
+      if (username == "toto" && password == "titi") {
+        return true;
+      } else if (username == "") {
+        alert("Username must be filled out");
+        return false;
+      } else if (passowrd == "") {
+        alert("Password must be filled out");
+        return false;
+      } else {
+        alert("Username or password is incorrect");
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
